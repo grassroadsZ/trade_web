@@ -29,7 +29,7 @@ class StrategyConfigModels(models.Model):
         verbose_name = '策略配置'
         verbose_name_plural = verbose_name
 
-    strategy_config_id = models.IntegerField(verbose_name="具体策略id")
+    strategy_config_id = models.IntegerField(verbose_name="自定义策略id")
     strategy_group_id = models.IntegerField(verbose_name="策略组", help_text="策略组,用来标识那几个参数属于同一个策略")
     strategy_key = models.ForeignKey(StrategyBaseModels.strategy, on_delete=models.CASCADE, verbose_name="策略")
     param_key = models.ForeignKey(StrategyBaseModels.strategy_param_name, on_delete=models.CASCADE,
