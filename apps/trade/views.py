@@ -7,7 +7,7 @@ from .models import DealConfigModels, StrategyConfigModels
 
 class TradeViews(views.View):
 
-    def get_func_param_value(self):
+    def get_func_param_value(self,request):
         # 获取币对及自定义交易策略 [{"ethusdt","定投策略"},{"ethusdt","倍投策略"}]
         deal_lists: list(dict) = [{i.coin_type: i.strategy} for i in DealConfigModels.objects.all()]
 
